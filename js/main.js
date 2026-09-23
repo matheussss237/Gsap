@@ -19,7 +19,7 @@ const themeBtn = document.querySelector(".theme-toggle");
 
 function applyTheme(theme) {
   root.dataset.theme = theme;
-  document.querySelector('meta[name="theme-color"]').content = theme === "light" ? "#f7f3fd" : "#0b0713";
+  document.querySelector('meta[name="theme-color"]').content = theme === "light" ? "#f0fdf4" : "#071a12";
   try { localStorage.setItem("tema", theme); } catch (e) {}
 }
 
