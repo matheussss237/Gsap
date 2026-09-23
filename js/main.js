@@ -287,18 +287,21 @@ function scrollAnimations() {
       scrollTrigger: {
         trigger: desktop ? ".projects-pin" : ".project-visual",
         start: desktop ? "top top" : "top 55%",
-        end: desktop ? "+=180%" : "bottom top",
+        end: desktop ? `+=${(screens.length - 1) * 110}%` : "bottom top",
         pin: desktop,
         scrub: 1,
         onUpdate: (self) => {
-          const i = Math.min(screens.length - 1, Math.floor(self.progress * screens.length));
+          // cada etapa = troca (0.5) + pausa (0.5); a aba muda na metade da troca
+          const t = self.progress * tl.duration();
+          const i = Math.max(0, Math.min(screens.length - 1, Math.floor(t - 0.25) + 1));
           steps.forEach((s, n) => s.classList.toggle("active", n === i));
         }
       }
     });
     screens.slice(1).forEach((img, i) => {
       tl.to(screens[i], { scale: 1.08, filter: "brightness(0.6)" })
-        .fromTo(img, { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)" }, "<");
+        .fromTo(img, { clipPath: "inset(100% 0% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)" }, "<")
+        .to({}, { duration: 0.5 }); // segura a tela um pouco antes da próxima
     });
     tl.to({}, { duration: 0.4 }); // pequena pausa no final antes de soltar o pin
   });
