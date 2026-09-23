@@ -1,26 +1,26 @@
 /* =========================================================
    Portfólio — Matheus Henrique
-   Tema escuro (padrão) em roxo + tema claro
+   Tema escuro (padrão) em verde + tema claro
    ========================================================= */
 
 /* ---------- Tokens de cor ---------- */
 :root {
-  --bg: #0b0713;
-  --bg-2: #120c1f;
-  --surface: #1a1229;
-  --surface-2: #231837;
-  --line: rgba(196, 167, 255, 0.12);
-  --line-strong: rgba(196, 167, 255, 0.28);
-  --txt: #f1ecfb;
-  --muted: #a89cc0;
-  --accent: #a855f7;
-  --accent-2: #7c3aed;
-  --accent-3: #e879f9;
-  --accent-txt: #c4a5ff;
-  --on-accent: #ffffff;
-  --glow: rgba(168, 85, 247, 0.35);
+  --bg: #071a12;
+  --bg-2: #0b2118;
+  --surface: #0f2a1e;
+  --surface-2: #143626;
+  --line: rgba(240, 253, 244, 0.1);
+  --line-strong: rgba(34, 197, 94, 0.3);
+  --txt: #f0fdf4;
+  --muted: #9bb8a8;
+  --accent: #22c55e;
+  --accent-2: #16a34a;
+  --accent-3: #4ade80;
+  --accent-txt: #4ade80;
+  --on-accent: #071a12;
+  --glow: rgba(34, 197, 94, 0.3);
   --shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
-  --grid: rgba(196, 167, 255, 0.05);
+  --grid: rgba(240, 253, 244, 0.04);
   --dark-icon-filter: invert(1);
 
   --font-display: "Space Grotesk", system-ui, sans-serif;
@@ -35,21 +35,22 @@
 }
 
 :root[data-theme="light"] {
-  --bg: #f7f3fd;
-  --bg-2: #efe8fa;
+  --bg: #f0fdf4;
+  --bg-2: #e3f7e9;
   --surface: #ffffff;
-  --surface-2: #f3edfc;
-  --line: rgba(76, 29, 149, 0.1);
-  --line-strong: rgba(76, 29, 149, 0.22);
-  --txt: #1b1030;
-  --muted: #5f5476;
-  --accent: #8b3cf0;
-  --accent-2: #6d28d9;
-  --accent-3: #c026d3;
-  --accent-txt: #6d28d9;
-  --glow: rgba(139, 60, 240, 0.22);
-  --shadow: 0 30px 70px -25px rgba(76, 29, 149, 0.28);
-  --grid: rgba(76, 29, 149, 0.06);
+  --surface-2: #e8f8ed;
+  --line: rgba(15, 42, 30, 0.1);
+  --line-strong: rgba(15, 42, 30, 0.22);
+  --txt: #071a12;
+  --muted: #4a6356;
+  --accent: #16a34a;
+  --accent-2: #15803d;
+  --accent-3: #22c55e;
+  --accent-txt: #15803d;
+  --on-accent: #ffffff;
+  --glow: rgba(34, 197, 94, 0.22);
+  --shadow: 0 30px 70px -25px rgba(15, 42, 30, 0.28);
+  --grid: rgba(15, 42, 30, 0.06);
   --dark-icon-filter: none;
   color-scheme: light;
 }
@@ -138,18 +139,18 @@ ul { list-style: none; }
    ========================================================= */
 .loader {
   position: fixed; inset: 0; z-index: 1000;
-  background: #07040d; color: #f1ecfb;
+  background: #071a12; color: #f0fdf4;
   display: flex; align-items: flex-end;
   padding: var(--pad);
   clip-path: inset(0 0 0 0);
 }
 .loader-inner { width: 100%; display: flex; justify-content: space-between; align-items: flex-end; gap: 2rem; flex-wrap: wrap; }
-.loader-line { font-family: var(--font-mono); font-size: clamp(0.85rem, 1.6vw, 1.05rem); color: #a89cc0; }
-.loader-line .prompt { color: #a855f7; }
-.loader-cmd::after { content: "▍"; color: #a855f7; animation: blink 0.8s steps(1) infinite; margin-left: 2px; }
+.loader-line { font-family: var(--font-mono); font-size: clamp(0.85rem, 1.6vw, 1.05rem); color: #9bb8a8; }
+.loader-line .prompt { color: #22c55e; }
+.loader-cmd::after { content: "▍"; color: #22c55e; animation: blink 0.8s steps(1) infinite; margin-left: 2px; }
 .loader-count { font-family: var(--font-display); font-weight: 700; font-size: clamp(4rem, 16vw, 13rem); line-height: 0.85; letter-spacing: -0.05em; }
 .loader-bar { position: absolute; left: 0; right: 0; top: 0; height: 3px; background: rgba(255, 255, 255, 0.06); }
-.loader-bar i { display: block; height: 100%; background: linear-gradient(90deg, #7c3aed, #e879f9); transform-origin: left; transform: scaleX(0); }
+.loader-bar i { display: block; height: 100%; background: linear-gradient(90deg, #16a34a, #4ade80); transform-origin: left; transform: scaleX(0); }
 
 @keyframes blink { 50% { opacity: 0; } }
 
