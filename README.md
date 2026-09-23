@@ -1,16 +1,56 @@
-# Portfólio GSAP + ScrollTrigger
+# Portfólio — Matheus Henrique
 
-Portfólio com animações ligadas à rolagem da página, feito com [GSAP](https://gsap.com) e o plugin **ScrollTrigger**.
+Portfólio pessoal de **Matheus Henrique**, desenvolvedor back-end em formação (Java, Spring Boot e Segurança da Informação), de Gama — DF.
 
-Para abrir, basta abrir o `index.html` no navegador (o GSAP é carregado por CDN).
+🔗 **Site:** https://matheussss237.github.io/Gsap/
 
-## Animações (em `script.js`)
+## Tecnologias
 
-| # | Efeito | Recurso do ScrollTrigger |
-|---|--------|--------------------------|
-| 1 | **Animação de entrada**: contador de 0 a 100, a tela verde sobe e as letras do nome aparecem uma a uma | `gsap.timeline()` (roda ao carregar a página) |
-| 2 | Títulos e textos surgem ao entrar na tela | `toggleActions` (**inicia** a animação) |
-| 3 | O nome do hero sobe e some enquanto você rola | `scrub: true` (**controla a progressão**) |
-| 4 | Texto gigante anda para o lado | `scrub: 1` (**suaviza**) |
-| 5 | Seção de projetos fica fixa e os cards rolam na horizontal | `pin: true` + `scrub` (**fixa**) |
-| 6 | Barras de habilidades enchem conforme o scroll | `scrub` + `stagger` |
+- HTML, CSS e JavaScript puro, sem frameworks e sem etapa de build
+- [GSAP 3.13](https://gsap.com) via CDN, com os plugins:
+  - **ScrollTrigger**: animações ligadas à rolagem (iniciar, `scrub`, `pin`)
+  - **ScrollSmoother**: rolagem suave
+  - **SplitText**: textos animados por letra, palavra e linha
+  - **ScrambleText** e **Text**: efeito "hacker" no cargo e digitação no loader
+- `clip-path` (estilo [Clippy](https://bennettfeely.com/clippy/)) para revelar o site, a foto, o menu e as telas do projeto
+- View Transitions API para a troca de tema em círculo
+
+## Animações
+
+| Onde | O que acontece | Recurso |
+|---|---|---|
+| Entrada | Terminal digita `java -jar portfolio.jar`, contador 000→100 e cortina com clip-path | `timeline`, TextPlugin, clip-path |
+| Hero | Nome surge letra por letra, a foto é revelada e o cargo "embaralha" em loop | SplitText, ScrambleText |
+| Hero (scroll) | Nome sobe, foto gira e diminui (parallax) | `scrub` |
+| Sobre | As palavras "acendem" conforme a rolagem | SplitText + `scrub` |
+| Números | Contadores animados | `snap` |
+| Stack | Faixas infinitas que aceleram com a velocidade do scroll | `getVelocity()` |
+| Projeto | A seção fica fixa e as telas do sistema trocam com a rolagem | `pin` + `scrub` + clip-path |
+| Formação | A linha do tempo se desenha | `scrub` |
+| Mouse | Cursor personalizado, botões magnéticos, cards 3D | `quickTo` |
+
+Também tem tema claro e escuro (salvo no navegador), menu em tela cheia no celular e suporte a
+`prefers-reduced-motion` (quem desativa animações no sistema vê o site sem elas).
+
+## Estrutura
+
+```
+index.html
+css/style.css
+js/main.js
+assets/
+  img/      foto e prints dos projetos
+  icons/    ícones das tecnologias (Devicon)
+  cv/       currículo (cv.html + PDF)
+```
+
+## Como editar
+
+- **Textos:** estão todos no `index.html`.
+- **Cores:** ficam em variáveis no topo do `css/style.css` (`:root` é o tema escuro e `[data-theme="light"]` é o claro).
+- **Novo projeto:** copie o bloco `<section class="projects">` no `index.html`.
+- **Currículo:** edite `assets/cv/cv.html`, abra no navegador, use *Imprimir → Salvar como PDF* (A4, sem margens, com "gráficos de fundo" ligado) e salve por cima de `assets/cv/Matheus-Henrique-CV.pdf`.
+
+## Rodar localmente
+
+Abra o `index.html` no navegador, ou rode `python -m http.server` e acesse `http://localhost:8000`.

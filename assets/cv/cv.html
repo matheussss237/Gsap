@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Currículo — Matheus Henrique</title>
+  <!-- Fonte do currículo. Para gerar o PDF: abrir no navegador > Imprimir > Salvar como PDF (A4, sem margens) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --ink: #1b1030; --muted: #5f5476; --accent: #7c3aed; --soft: #f3edfc; --line: #e6dcf7; }
+    body { font-family: "Inter", system-ui, sans-serif; color: var(--ink); font-size: 9.2pt; line-height: 1.42; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { width: 210mm; min-height: 297mm; display: grid; grid-template-columns: 68mm 1fr; }
+
+    aside { background: #140c24; color: #efe9fb; padding: 11mm 7mm 10mm; }
+    .photo { width: 30mm; height: 30mm; border-radius: 50%; object-fit: cover; border: 3px solid #a855f7; margin-bottom: 4mm; }
+    aside h2 { font-family: "Space Grotesk", sans-serif; font-size: 9pt; letter-spacing: .14em; text-transform: uppercase; color: #c4a5ff; margin: 5mm 0 2mm; }
+    aside p, aside li { font-size: 9pt; color: #d9d0ec; }
+    aside ul { list-style: none; display: grid; gap: 1.2mm; }
+    aside a { color: #efe9fb; text-decoration: none; overflow-wrap: anywhere; }
+    .contact a { font-size: 8.2pt; }
+    .contact li span { display: block; font-size: 7.5pt; color: #a89cc0; text-transform: uppercase; letter-spacing: .08em; }
+    .chips { display: flex; flex-wrap: wrap; gap: 1.5mm; list-style: none; }
+    .chips li { font-size: 8pt; padding: .8mm 2.4mm; border-radius: 99px; background: rgba(168, 85, 247, .18); color: #efe9fb; }
+
+    main { padding: 11mm 11mm 10mm 10mm; }
+    h1 { font-family: "Space Grotesk", sans-serif; font-size: 25pt; line-height: 1; letter-spacing: -.03em; }
+    .role { color: var(--accent); font-weight: 600; font-size: 11.5pt; margin: 2mm 0 3mm; }
+    main h2 { font-family: "Space Grotesk", sans-serif; font-size: 11pt; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); border-bottom: 1.5px solid var(--line); padding-bottom: 1.2mm; margin: 4.5mm 0 2.2mm; }
+    .item { margin-bottom: 2.5mm; }
+    .item-head { display: flex; justify-content: space-between; gap: 4mm; align-items: baseline; }
+    .item h3 { font-size: 10.5pt; font-weight: 700; }
+    .date { font-size: 8.5pt; color: var(--muted); white-space: nowrap; }
+    .place { color: var(--muted); font-size: 9pt; font-weight: 500; }
+    .item ul { margin: 1.5mm 0 0 4.5mm; }
+    .item li { margin-bottom: .3mm; }
+    .summary { color: #2e2342; }
+    .skills { display: grid; grid-template-columns: 30mm 1fr; gap: 1.6mm 4mm; }
+    .skills dt { font-weight: 600; }
+    .skills dd { color: #2e2342; }
+    a.link { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside>
+      <img class="photo" src="../img/foto.jpg" alt="Foto de Matheus Henrique">
+
+      <h2>Contato</h2>
+      <ul class="contact">
+        <li><span>E-mail</span><a href="mailto:matheus.henrique.madeira1@gmail.com">matheus.henrique.madeira1@gmail.com</a></li>
+        <li><span>LinkedIn</span><a href="https://linkedin.com/in/matheushenriquem">linkedin.com/in/matheushenriquem</a></li>
+        <li><span>GitHub</span><a href="https://github.com/matheussss237">github.com/matheussss237</a></li>
+        <li><span>Portfólio</span><a href="https://matheussss237.github.io/Gsap/">matheussss237.github.io/Gsap</a></li>
+        <li><span>Localização</span>Gama — Distrito Federal</li>
+      </ul>
+
+      <h2>Back-End</h2>
+      <ul class="chips"><li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>Spring Data JPA</li><li>APIs REST</li><li>JWT</li></ul>
+
+      <h2>Bancos de dados</h2>
+      <ul class="chips"><li>PostgreSQL</li><li>MySQL</li><li>MongoDB</li><li>H2</li></ul>
+
+      <h2>Front-End</h2>
+      <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GSAP</li></ul>
+
+      <h2>Ferramentas</h2>
+      <ul class="chips"><li>Git</li><li>GitHub</li><li>Postman</li><li>Render</li></ul>
+
+      <h2>Idiomas</h2>
+      <ul>
+        <li>Português — nativo</li>
+        <li>Inglês — básico</li>
+      </ul>
+    </aside>
+
+    <main>
+      <h1>Matheus Henrique</h1>
+      <p class="role">Desenvolvedor Back-End em formação · Java &amp; Spring Boot</p>
+
+      <h2>Resumo</h2>
+      <p class="summary">
+        Desenvolvedor de 18 anos, técnico em Desenvolvimento de Sistemas pelo Senac-DF e estudante de
+        Engenharia de Software na UniCEPLAC. Tenho experiência prática com Java, Spring Boot, APIs REST
+        e bancos de dados relacionais, e interesse especial em segurança da informação e arquitetura de
+        sistemas. Aprendo rápido, gosto de trabalhar em equipe e busco uma oportunidade de estágio ou
+        primeiro emprego para aplicar e evoluir minhas habilidades em projetos reais.
+      </p>
+
+      <h2>Formação</h2>
+      <div class="item">
+        <div class="item-head"><h3>Engenharia de Software</h3><span class="date">Cursando</span></div>
+        <p class="place">UniCEPLAC — Centro Universitário do Planalto Central</p>
+      </div>
+      <div class="item">
+        <div class="item-head"><h3>Técnico em Desenvolvimento de Sistemas</h3><span class="date">Concluído · 2026</span></div>
+        <p class="place">Senac — Distrito Federal</p>
+        <ul>
+          <li>Lógica de programação, Java, orientação a objetos e bancos de dados</li>
+          <li>Desenvolvimento web (HTML, CSS, JavaScript) e versionamento com Git</li>
+        </ul>
+      </div>
+
+      <h2>Projetos</h2>
+      <div class="item">
+        <div class="item-head"><h3>Brasília Participa</h3><span class="date">UniCEPLAC · Projeto Integrador</span></div>
+        <p class="place">HTML · CSS · JavaScript · Leaflet · localStorage — equipe de 11 pessoas</p>
+        <ul>
+          <li>Portal de participação cidadã para registrar e acompanhar problemas urbanos no DF</li>
+          <li>Registro de demandas com foto e localização em mapa interativo, busca, filtros e dashboard</li>
+          <li>Camada de dados isolada, preparada para integração com API REST em Java/Spring</li>
+        </ul>
+        <p><a class="link" href="https://github.com/matheussss237/Brasilia-Participa">github.com/matheussss237/Brasilia-Participa</a></p>
+      </div>
+      <div class="item">
+        <div class="item-head"><h3>Portfólio pessoal</h3><span class="date">2026</span></div>
+        <p class="place">HTML · CSS · JavaScript · GSAP (ScrollTrigger, ScrollSmoother, SplitText)</p>
+        <ul>
+          <li>Site responsivo com animações de entrada e de rolagem, tema claro/escuro e acessibilidade</li>
+        </ul>
+      </div>
+
+      <h2>Cursos complementares</h2>
+      <div class="item">
+        <p>Estudo contínuo em Java, Spring, Git e Segurança da Informação — Alura, Udemy e Senac.</p>
+      </div>
+
+      <h2>Competências</h2>
+      <dl class="skills">
+        <dt>Técnicas</dt><dd>Modelagem de dados, APIs REST, autenticação com JWT, testes de API com Postman, deploy no Render</dd>
+        <dt>Comportamentais</dt><dd>Trabalho em equipe, vontade de aprender, organização e comunicação</dd>
+      </dl>
+    </main>
+  </div>
+</body>
+</html>
