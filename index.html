@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio GSAP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ANIMAÇÃO DE ENTRADA (tela de carregamento) -->
+  <div class="intro">
+    <span class="intro-count">0</span>
+    <div class="intro-bar"></div>
+  </div>
+
+  <header class="nav">
+    <span class="logo">MH.</span>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-sub">Olá, eu sou</p>
+    <h1 class="hero-title split">Matheus</h1>
+    <p class="hero-sub">Desenvolvedor Front-end</p>
+    <span class="scroll-hint">role ↓</span>
+  </section>
+
+  <!-- SOBRE: aparece ao rolar -->
+  <section id="sobre" class="sobre">
+    <h2 class="reveal">Sobre mim</h2>
+    <p class="reveal">Estudante de desenvolvimento web apaixonado por interfaces animadas.
+      Este portfólio usa <strong>GSAP + ScrollTrigger</strong> para ligar a rolagem da página às animações.</p>
+  </section>
+
+  <!-- TEXTO GIGANTE: scrub (acompanha o scroll) -->
+  <section class="marquee">
+    <h2 class="marquee-text">HTML · CSS · JAVASCRIPT · GSAP ·</h2>
+  </section>
+
+  <!-- PROJETOS: pin + rolagem horizontal -->
+  <section id="projetos" class="projetos">
+    <div class="projetos-track">
+      <div class="card"><span>01</span><h3>Landing Page</h3><p>Site responsivo com animações.</p></div>
+      <div class="card"><span>02</span><h3>To-Do App</h3><p>Lista de tarefas em JavaScript.</p></div>
+      <div class="card"><span>03</span><h3>Clone Netflix</h3><p>Layout com HTML e CSS.</p></div>
+      <div class="card"><span>04</span><h3>Portfólio GSAP</h3><p>Este site que você está vendo.</p></div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES: barras preenchem com o scroll -->
+  <section class="skills">
+    <h2 class="reveal">Habilidades</h2>
+    <div class="skill"><p>HTML</p><div class="bar"><i style="--w:90%"></i></div></div>
+    <div class="skill"><p>CSS</p><div class="bar"><i style="--w:80%"></i></div></div>
+    <div class="skill"><p>JavaScript</p><div class="bar"><i style="--w:70%"></i></div></div>
+    <div class="skill"><p>GSAP</p><div class="bar"><i style="--w:60%"></i></div></div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contato">
+    <h2 class="reveal">Vamos conversar?</h2>
+    <a class="btn reveal" href="mailto:seuemail@exemplo.com">Entrar em contato</a>
+  </section>
+
+  <!-- GSAP + ScrollTrigger via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
